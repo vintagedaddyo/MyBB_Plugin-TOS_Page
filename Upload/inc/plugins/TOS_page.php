@@ -66,24 +66,24 @@ function TOS_page_activate()
  $lang->load('TOS_page');
 	
 	$TOSpage = array(
-		'name' => 'TOS_page',
-  'title'          => ''.$lang->TOS_page_Setting_0_Title.'', 
-  'description'    => ''.$lang->TOS_page_Setting_0_Description.'',
-		'disporder' => '403',
-		'isdefault' => '0'
+		'name'           => 'TOS_page',
+                'title'          => ''.$lang->TOS_page_Setting_0_Title.'', 
+                'description'    => ''.$lang->TOS_page_Setting_0_Description.'',
+		'disporder'      => '403',
+		'isdefault'      => '0'
 		);
 		
 	$group['gid'] = $db->insert_query('settinggroups', $TOSpage);
 	$gid = $db->insert_id();
 	
 	$TOSlist = array(
-		'name' => 'TOS_list',
-  'title'          => ''.$lang->TOS_page_Setting_1_Title.'', 
-  'description'    => ''.$lang->TOS_page_Setting_1_Description.'',
-		'optionscode' => 'textarea',
-		'value' =>       ''.$lang->TOS_page_Setting_1_Value.'',
-		'disporder' => '1',
-		'gid' => intval($gid)
+		'name'           => 'TOS_list',
+                'title'          => ''.$lang->TOS_page_Setting_1_Title.'', 
+                'description'    => ''.$lang->TOS_page_Setting_1_Description.'',
+		'optionscode'    => 'textarea',
+		'value'          => ''.$lang->TOS_page_Setting_1_Value.'',
+		'disporder'      => '1',
+		'gid'            => intval($gid)
 		);
 		
 	$db->insert_query('settings', $TOSlist);
